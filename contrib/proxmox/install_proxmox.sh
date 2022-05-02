@@ -23,13 +23,13 @@ useradd systemsensors -r -g systemsensors
 
 echo "Install pip requirements"
 
-curl -o /tmp/requirements.txt https://raw.githubusercontent.com/Sennevds/system_sensors/master/requirements.txt
+curl -o /tmp/requirements.txt https://raw.githubusercontent.com/nlubello/system_sensors/master/requirements.txt
 pip3 install -r /tmp/requirements.txt
 
 mkdir -p  /home/systemsensors/etc/ /home/systemsensors/bin/
 
-curl -o /home/systemsensors/bin/sensors.py https://raw.githubusercontent.com/Sennevds/system_sensors/master/src/sensors.py
-curl -o /home/systemsensors/bin/system_sensors.py  https://raw.githubusercontent.com/Sennevds/system_sensors/master/src/system_sensors.py
+curl -o /home/systemsensors/bin/sensors.py https://raw.githubusercontent.com/nlubello/system_sensors/master/src/sensors.py
+curl -o /home/systemsensors/bin/system_sensors.py  https://raw.githubusercontent.com/nlubello/system_sensors/master/src/system_sensors.py
 
 chmod 755 /home/systemsensors/bin/sensors.py /home/systemsensors/bin/system_sensors.py
 chown -R systemsensors:systemsensors /home/systemsensors/
